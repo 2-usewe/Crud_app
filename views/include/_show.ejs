@@ -1,0 +1,18 @@
+<% for(var i=0;i<users.length;i++){ %>
+
+
+<tr>
+    <td><%=users[i].c_name %></td>
+    <td><%=users[i].c_duration %></td>
+    <td><%=users[i].c_fees %></td>
+    <td><%=users[i].status %></td>
+    <td>
+        <a href="/update-user?id=<%=users[i].id %>" class="btn border-shadow update">
+            <span class="text-gradient"> <i class="fas fa-pencil-alt"></i> </span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%=users[i].id %> >
+            <span class="text-gradient"> <i class="fas fa-times"></i> </span>   
+        </a>
+    </td>
+</tr>
+<% } %>
